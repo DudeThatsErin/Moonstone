@@ -7,7 +7,7 @@ Moonstone is based on AnuPpuccin by Anubis and is licensed under
 the GPL-3.0 license which allows you to modify the code freely, 
 however the Copyright and license notices must be preserved in 
 your CSS. Original AnuPpuccin theme by Anubis:
-            https://www.buymeacoffee.com/anubisnekhet
+            https://www.buymeacoffee.com/erinskidds
 *===============================================================*/
 /* @settings
 name: Moonstone
@@ -167,34 +167,6 @@ settings:
     id: moonstone-url-extended-colorschemes
     title: Extended Color Schemes Snippet
     description: "Based on AnuPpuccin extended colorschemes. Original snippet: [this link](https://github.com/AnubisNekhet/AnuPpuccin/blob/main/snippets/extended-colorschemes.css)."
-    type: info-text
-    markdown: true
-
-# Support Moonstone
-
--
-    id: moonstone-support-header
-    title: Support Moonstone
-    description: If you like the theme, here are some ways to support development
-    type: heading
-    level: 1
-    collapsed: true
--
-    id: moonstone-buymeacoffee
-    title: ☕ Buy Me a Coffee
-    description: "[Support development on BuyMeACoffee](https://buymeacoffee.com/erinskidds)"
-    type: info-text
-    markdown: true
--
-    id: moonstone-github-star
-    title: ⭐ Star the Theme on GitHub
-    description: "[Star the repository](https://github.com/DudeThatsErin/Moonstone)"
-    type: info-text
-    markdown: true
--
-    id: moonstone-github-issues
-    title: 🐛 Submit an Issue on GitHub
-    description: "[Report bugs or request features](https://github.com/DudeThatsErin/Moonstone/issues)"
     type: info-text
     markdown: true
 
@@ -1440,18 +1412,6 @@ settings:
     title: Autohide Title Bar
     type: class-toggle
 -
-    id: anp-cursor
-    title: Pointer cursor
-    type: variable-select
-    default: pointer
-    options:
-    -
-        label: Pointer
-        value: pointer
-    -
-        label: Normal
-        value: initial
--
     id: anp-toggle-metadata
     title: Hide Metadata
     type: class-toggle
@@ -1462,10 +1422,6 @@ settings:
 -
     id: anp-hide-status-bar
     title: Hide Status Bar
-    type: class-toggle
--
-    id: anp-tooltip-toggle
-    title: Hide Tooltips
     type: class-toggle
 -
     id: anp-hide-external-link-icon
@@ -2862,28 +2818,28 @@ settings:
 # Credits
 
 -
-    id: anuppuccin-support
-    title: Support AnuPpuccin
+    id: moonstone-support
+    title: Support Moonstone
     description: If you like the theme, here are some ways to support development
     type: heading
     level: 1
     collapsed: true
 -
-    id: anuppuccin-url-donate
-    title: Buy Me a Coffee
-    description: "[https://www.buymeacoffee.com/anubisnekhet](https://www.buymeacoffee.com/anubisnekhet)"
+    id: moonstone-url-donate
+    title: ☕ Buy Me a Coffee
+    description: "[https://buymeacoffee.com/erinskidds](https://buymeacoffee.com/erinskidds)"
     type: info-text
     markdown: true
 -
-    id: anuppuccin-url-star-repo
-    title: Star the Theme on GitHub
-    description: "[https://github.com/anubisnekhet/anuppuccin](https://github.com/anubisnekhet/anuppuccin)"
+    id: moonstone-url-star-repo
+    title: ⭐ Star the Theme on GitHub
+    description: "[https://github.com/DudeThatsErin/Moonstone](https://github.com/DudeThatsErin/Moonstone)"
     type: info-text
     markdown: true
 -
-    id: anuppuccin-url-submit-issue
-    title: Submit an Issue on GitHub
-    description: "[https://github.com/anubisnekhet/anuppuccin/issues](https://github.com/anubisnekhet/anuppuccin/issues)"
+    id: moonstone-url-submit-issue
+    title: 🐛 Submit an Issue on GitHub
+    description: "[https://github.com/DudeThatsErin/Moonstone/issues](https://github.com/DudeThatsErin/Moonstone/issues)"
     type: info-text
     markdown: true
 
