@@ -1,6 +1,8 @@
 # Moonstone Theme for Obsidian
 
-A beautiful, highly customizable theme for Obsidian based on AnuPpuccin, featuring integrated CSS snippets and advanced customization options through Style Settings.
+> **Note:** This theme is on hold until I decide what route I want to go with the theme. The theme is SUPER basic right now but I have a lot of ideas for it.
+
+A beautiful, highly customizable theme for Obsidian.
 
 ## ✨ Features
 
