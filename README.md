@@ -1,8 +1,8 @@
 # Moonstone Theme for Obsidian
 
-A beautiful dark theme for Obsidian based on AnuPpuccin, featuring integrated CSS snippets as optional, customizable features.
+A beautiful, highly customizable theme for Obsidian based on AnuPpuccin, featuring integrated CSS snippets and advanced customization options through Style Settings.
 
-## Features
+## ✨ Features
 
 ### 🎨 **Custom Callouts**
 Enhanced callout styles with custom icons and customizable colors. Includes callouts for:
@@ -15,7 +15,7 @@ Enhanced callout styles with custom icons and customizable colors. Includes call
 ### 🌈 **Font Colors & Highlights**
 - **27+ Text Color Classes**: `.text-red`, `.text-blue`, `.text-green`, etc.
 - **Custom Highlights**: `.hl-red`, `.hl-pink`, `.hl-purple`, `.hl-blue`, `.hl-cyan`, `.hl-yellow`, `.hl-green`
-- All colors optimized for dark mode readability
+- All colors optimized for both light and dark modes
 
 ### 📝 **Font Styles**
 - **Text Formatting**: `.bold`, `.italic`, `.underline`, `.strikethrough`
@@ -35,23 +35,64 @@ Enhanced checkbox styles with 20+ special task types:
 - `[*]` - Star (yellow star)
 - And many more with emoji icons!
 
-### 📁 **Hide Folders**
-Selectively hide folders from the file explorer:
-- Configure up to 3 folder paths via Style Settings
-- Perfect for hiding template folders, archives, or system directories
+### 🌈 **Rainbow Folders**
+Colorful folder backgrounds in the file explorer:
+- 11 beautiful colors that cycle through folders
+- Customizable hover brightness
+- Makes navigation more visually appealing
 
-### 📂 **File Explorer Dividers**
-Add custom labeled dividers before specific folders/files:
-- Configure up to 3 divider locations
-- Customizable divider labels
-- Great for organizing your vault structure visually
+### 📋 **Kanban Board Enhancements**
+Custom styling for Kanban boards:
+- Adjustable lane width
+- Customizable item margins
+- Improved visual hierarchy
 
-## Installation
+### 🔄 **Sidebar Auto-hide**
+Auto-hiding sidebar tab icons:
+- Icons fade out when not in use
+- Smooth hover animations
+- Customizable collapsed height
+- Saves screen real estate
 
+### 🃏 **Card Layout System**
+Border theme-style card layout with full customization:
+- **Separate light/dark mode toggles**
+- **Customizable border radius** for each mode
+- **Adjustable shadows** with custom values
+- **Multiple background options**:
+  - Background primary/secondary
+  - Adapt to accent color
+  - Custom color picker
+- **Plugin settings enhancements** with wider, more spacious layouts
+
+### 🎨 **Header Customization**
+Complete control over header styling:
+- **Custom header colors** for light and dark modes (perfect for rainbow headers!)
+- **Header border toggle** - add underlines to headers
+- **Font family customization** - choose any font for headers
+- **Font weight control** - from light (100) to black (900)
+
+### 📏 **Advanced Customization**
+- **Scrollbar styling** with custom colors and opacity
+- **Plugin setting box customization** - width and padding controls
+- **Comprehensive Style Settings integration** - every feature is toggleable and customizable
+
+## 📦 Installation
+
+### Method 1: Manual Installation
 1. Download the theme files (`manifest.json` and `theme.css`)
 2. Place them in your `.obsidian/themes/moonstone/` directory
 3. Enable the theme in Obsidian Settings → Appearance → Themes
 4. Install the **Style Settings** plugin for full customization
+
+### Method 2: BRAT Installation (Recommended)
+1. Install the **BRAT** (Beta Reviewer's Auto-update Tool) plugin
+2. Open Command Palette (Ctrl/Cmd + P)
+3. Run "BRAT: Add a beta theme"
+4. Enter the repository URL: `DudeThatsErin/Moonstone`
+5. The theme will be automatically installed and updated
+6. Enable the theme in Settings → Appearance → Themes
+7. Install the **Style Settings** plugin for full customization
 
 ## Configuration
 
@@ -62,21 +103,27 @@ All features are controlled through the **Style Settings** plugin:
 3. Customize colors, folder paths, and divider labels
 4. Changes apply instantly!
 
-### Feature Toggles
+### Integrated Snippets (All Toggleable)
 
-- **Custom Callouts**: Enable enhanced callout styles
-- **Font Colors**: Enable text color classes
-- **Font Styles**: Enable font styling and family classes
-- **Custom Checkboxes**: Enable enhanced checkbox styles
-- **Hide Folders**: Hide specified folders from file explorer
-- **File Explorer Dividers**: Add labeled dividers in file explorer
+Each snippet is organized in its own collapsible section with the enable/disable toggle and related settings:
 
-### Customization Options
+- **Custom Callouts**: Enhanced callout styles with icons
+- **Custom Checkboxes**: 20+ special task types with emoji icons  
+- **Font Colors**: 27+ text color classes and custom highlights
+- **Font Styles**: Text formatting, sizing, alignment, and 30+ font families
+- **Rainbow Folders**: Colorful folder backgrounds with brightness control
+- **Kanban Edits**: Custom board styling with adjustable dimensions
+- **Sidebar Auto-hide**: Auto-hiding tab icons with animation controls
+- **Card Layout**: Border theme-style floating cards with full customization
 
-- **Callout Base Color**: Customize the primary color for callouts
-- **Hidden Folder Paths**: Specify up to 3 folder paths to hide
-- **Divider Locations**: Set folder/file paths for dividers
-- **Divider Labels**: Customize the text shown in dividers
+### Advanced Customization Options
+
+- **Header Colors**: Custom colors for light/dark modes (rainbow headers!)
+- **Header Borders**: Toggle underlines on headers
+- **Header Fonts**: Font family and weight customization
+- **Card Layout**: Border radius, shadows, and background options for each mode
+- **Scrollbar Styling**: Custom colors and opacity
+- **Plugin Settings**: Enhanced layout with width and padding controls
 
 ## Usage Examples
 
@@ -111,7 +158,11 @@ This is <span class="shadow glow">text with shadow and glow</span>
 - [*] Starred task
 ```
 
-## Support
+## 💬 Support & Community
+
+Join our Discord server for support, discussions, and theme updates:
+
+🔗 **[Join the Discord Server](https://discord.gg/zgkMsNcBPT)**
 
 If you like this theme, consider supporting development:
 
