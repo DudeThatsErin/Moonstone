@@ -4,6 +4,10 @@
 
 A beautiful, highly customizable theme for Obsidian.
 
+Join our Discord server for support, discussions, and theme updates:
+
+🔗 **[Join the Discord Server](https://discord.gg/zgkMsNcBPT)**
+
 ## ✨ Features
 
 ### 🎨 **Custom Callouts**
@@ -171,17 +175,3 @@ If you like this theme, consider supporting development:
 - ☕ [Buy Me a Coffee](https://buymeacoffee.com/erinskidds)
 - ⭐ [Star the repository](https://github.com/DudeThatsErin/Moonstone)
 - 🐛 [Report issues or request features](https://github.com/DudeThatsErin/Moonstone/issues)
-
-## Credits
-
-This theme is based on the excellent [AnuPpuccin](https://github.com/AnubisNekhet/AnuPpuccin) theme by AnubisNekhet. The custom CSS snippets have been integrated and made configurable through Style Settings.
-
-## License
-
-This theme is released under the same license as the original AnuPpuccin theme.
-
----
-
-**Author**: Erin Skidds  
-**GitHub**: [@DudeThatsErin](https://github.com/DudeThatsErin)  
-**Repository**: [Moonstone Theme](https://github.com/DudeThatsErin/Moonstone)
