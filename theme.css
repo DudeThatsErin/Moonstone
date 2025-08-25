@@ -1,1181 +1,289 @@
-/* @settings
+/* -----------------------------------------------------------------------------------------
+Theme
+----------------------------------------------------------------------------------------- */
 
-name: Moonstone
-id: moonstone
-settings:
-  - 
-    id: heading-fonts
-    title: Fonts
-    type: heading
-    level: 1
-    collapsed: true
-  - 
-    id: default-font
-    title: Base Font
-    type: variable-text
-    default: '"Excalifont", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif'
-  - 
-    id: mermaid-font
-    title: Mermaid Font
-    type: variable-text
-    default: '"Excalifont", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif'
-  - 
-    id: reveal-font
-    title: Reveal Font
-    type: variable-text
-    default: '"Excalifont", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif'
-  - 
-    id: font-monospace
-    title: Monospace Font
-    description: Used for codeblocks, tables, etc.
-    type: variable-text
-    default: '"JetBrains Mono", monospace'
-  
-  - 
-    id: heading-colors-background
-    title: Background Colors
-    type: heading
-    level: 1
-    collapsed: true
-  -
-    id: background-primary
-    title: Background Primary
-    type: variable-themed-color
-    opacity: false
-    format: hex
-    default-light: '#ffffff'
-    default-dark: '#202020'
-  -
-    id: background-primary-alt
-    title: Background Primary (alt)
-    type: variable-themed-color
-    opacity: false
-    format: hex
-    default-light: '#f5f6f8'
-    default-dark: '#1a1a1a'
-  -
-    id: background-secondary
-    title: Background Secondary
-    type: variable-themed-color
-    opacity: false
-    format: hex
-    default-light: '#f2f3f5'
-    default-dark: '#161616'
-  -
-    id: background-secondary-alt
-    title: Background Secondary (alt)
-    type: variable-themed-color
-    opacity: false
-    format: hex
-    default-light: '#e3e5e8'
-    default-dark: '#000000'
-  -
-    id: background-modifier-border
-    title: 'Background Modifier: Border'
-    type: variable-themed-color
-    opacity: true
-    format: rgb
-    default-light: '#dddddd'
-    default-dark: '#333333'
-  -
-    id: background-modifier-form-field
-    title: 'Background Modifier: Form Field'
-    type: variable-themed-color
-    opacity: true
-    format: rgb
-    default-light: '#ffffffff'
-    default-dark: '#0000004d'
-  -
-    id: background-modifier-form-field-highlighted
-    title: 'Background Modifier: Form Field (highlighted)'
-    type: variable-themed-color
-    opacity: true
-    format: rgb
-    default-light: '#ffffffff'
-    default-dark: '#00000038'
-  -
-    id: background-modifier-box-shadow
-    title: 'Background Modifier: Box Shadow'
-    type: variable-themed-color
-    opacity: true
-    format: rgb
-    default-light: '#0000001a'
-    default-dark: '#0000004d'
-  -
-    id: background-modifier-success
-    title: 'Background Modifier: Success'
-    type: variable-themed-color
-    opacity: true
-    format: rgb
-    default-light: '#A4E7C3'
-    default-dark: '#197300'
-  -
-    id: background-modifier-error
-    title: 'Background Modifier: Error'
-    type: variable-themed-color
-    opacity: false
-    format: hex
-    alt-format:
-      -
-        id: background-modifier-error-rgb
-        format: rgb-values
-    default-light: '#990000'
-    default-dark: '#3d0000'
-  -
-    id: background-modifier-error-hover
-    title: 'Background Modifier: Error (hover)'
-    type: variable-themed-color
-    opacity: true
-    format: rgb
-    default-light: '#bb0000'
-    default-dark: '#470000'
-  -
-    id: background-modifier-cover
-    title: 'Background Modifier: Cover'
-    type: variable-themed-color
-    opacity: true
-    format: rgb
-    default-light: '#000000cc'
-    default-dark: '#000000cc'
+/* 
+                  Moonstone Theme
+                          by Erin Skidds
+                  https://github.com/DudeThatsErin/Moonstone
+                  https://buymeacoffee.com/erinskidds
+                  https://discord.gg/XcJWhE3SEA
 
-  - 
-    id: heading-colors-text
-    title: Text Colors
-    type: heading
-    level: 1
-    collapsed: true
-  -
-    id: text-accent
-    title: 'Text: Accent'
-    type: variable-themed-color
-    opacity: false
-    format: hex
-    default-light: '#705dcf'
-    default-dark: '#7f6df2'
-  -
-    id: text-accent-hover
-    title: 'Text: Accent (hover)'
-    type: variable-themed-color
-    opacity: false
-    format: hex
-    default-light: '#7a6ae6'
-    default-dark: '#8875ff'
-  -
-    id: text-normal
-    title: 'Text: Normal'
-    type: variable-themed-color
-    opacity: false
-    format: hex
-    default-light: '#2e3338'
-    default-dark: '#dcddde'
-  -
-    id: text-muted
-    title: 'Text: Muted'
-    type: variable-themed-color
-    opacity: false
-    format: hex
-    default-light: '#888888'
-    default-dark: '#999999'
-  -
-    id: text-faint
-    title: 'Text: Faint'
-    type: variable-themed-color
-    opacity: false
-    format: hex
-    default-light: '#999999'
-    default-dark: '#666666'
-  -
-    id: text-error
-    title: 'Text: Error'
-    type: variable-themed-color
-    opacity: false
-    format: hex
-    default-light: '#800000'
-    default-dark: '#ff3333'
-  -
-    id: text-error-hover
-    title: 'Text: Error (hover)'
-    type: variable-themed-color
-    opacity: false
-    format: hex
-    default-light: '#990000'
-    default-dark: '#990000'
-  -
-    id: text-highlight-bg
-    title: 'Text: Highlight Background'
-    type: variable-themed-color
-    opacity: true
-    format: rgb
-    default-light: '#ffff0066'
-    default-dark: '#ffff0066'
-  -
-    id: text-highlight-bg-active
-    title: 'Text: Highlight Background (active)'
-    type: variable-themed-color
-    opacity: true
-    format: rgb
-    default-light: '#ff800066'
-    default-dark: '#ff800066'
-  -
-    id: text-selection
-    title: 'Text: Selection Background'
-    type: variable-themed-color
-    opacity: true
-    format: rgb
-    default-light: '#cce6fffc'
-    default-dark: '#17304dfc'
-  -
-    id: text-selection
-    title: 'Text: On Accent'
-    type: variable-themed-color
-    opacity: false
-    format: hex
-    default-light: '#f2f2f2'
-    default-dark: '#dcddde'
-  
-  - 
-    id: heading-colors-interactive
-    title: Interactive Colors
-    type: heading
-    level: 1
-    collapsed: true
-  -
-    id: interactive-normal
-    title: 'Interactive: Normal'
-    type: variable-themed-color
-    opacity: false
-    format: hex
-    default-light: '#f2f3f5'
-    default-dark: '#2a2a2a'
-  -
-    id: interactive-hover
-    title: 'Interactive: Hover'
-    type: variable-themed-color
-    opacity: false
-    format: hex
-    default-light: '#e9e9e9'
-    default-dark: '#303030'
-  -
-    id: interactive-accent
-    title: 'Interactive: Accent'
-    type: variable-themed-color
-    opacity: false
-    format: hex
-    alt-format:
-      -
-        id: interactive-accent-rgb
-        format: rgb-values
-    default-light: '#7b6cd9'
-    default-dark: '#483699'
-
-  -
-    id: interactive-accent-hover
-    title: 'Interactive: Accent (hover)'
-    type: variable-themed-color
-    opacity: false
-    format: hex
-    default-light: '#8273e6'
-    default-dark: '#4d3ca6'
-  -
-    id: interactive-success
-    title: 'Interactive: Success'
-    type: variable-themed-color
-    opacity: false
-    format: hex
-    default-light: '#197300'
-    default-dark: '#197300'
-
-  - 
-    id: heading-colors-scrollbar
-    title: Scrollbar Colors
-    type: heading
-    level: 1
-    collapsed: true
-  -
-    id: scrollbar-bg
-    title: 'Scrollbar: Background'
-    type: variable-themed-color
-    opacity: true
-    format: rgb
-    default-light: '#0000000d'
-    default-dark: '#ffffff0d'
-  -
-    id: scrollbar-thumb-bg
-    title: 'Scrollbar: Thumb Background'
-    type: variable-themed-color
-    opacity: true
-    format: rgb
-    default-light: '#0000001a'
-    default-dark: '#ffffff1a'
-  -
-    id: scrollbar-active-thumb-bg
-    title: 'Scrollbar: Active Thumb Background'
-    type: variable-themed-color
-    opacity: true
-    format: rgb
-    default-light: '#00000033'
-    default-dark: '#ffffff33'
-
-  - 
-    id: heading-snippets
-    title: Integrated Snippets
-    type: heading
-    level: 1
-    collapsed: true
-  -
-    id: custom-callouts-section
-    title: Custom Callouts
-    type: heading
-    level: 2
-    collapsed: true
-  -
-    id: enable-custom-callouts
-    title: Enable Custom Callouts
-    description: Enable custom callout styles with icons
-    type: class-toggle
-    default: true
-  -
-    id: custom-checkboxes-section
-    title: Custom Checkboxes
-    type: heading
-    level: 2
-    collapsed: true
-  -
-    id: enable-erin-checkboxes
-    title: Enable Custom Checkboxes
-    description: Enable Erin's custom checkbox styles
-    type: class-toggle
-    default: true
-  -
-    id: font-colors-section
-    title: Font Colors
-    type: heading
-    level: 2
-    collapsed: true
-  -
-    id: enable-font-colors
-    title: Enable Font Colors
-    description: Enable custom text and highlight colors
-    type: class-toggle
-    default: true
-  -
-    id: font-styles-section
-    title: Font Styles
-    type: heading
-    level: 2
-    collapsed: true
-  -
-    id: enable-font-styles
-    title: Enable Font Styles
-    description: Enable custom font families and text styles
-    type: class-toggle
-    default: true
-  -
-    id: rainbow-folders-section
-    title: Rainbow Folders
-    type: heading
-    level: 2
-    collapsed: true
-  -
-    id: enable-rainbow-folders
-    title: Enable Rainbow Folders
-    description: Enable colorful folder backgrounds in file explorer
-    type: class-toggle
-    default: true
-  -
-    id: rainbow-folder-brightness
-    title: Rainbow Folder Hover Brightness
-    description: Brightness level when hovering over rainbow folders
-    type: variable-number-slider
-    default: 0.8
-    min: 0.5
-    max: 1.0
-    step: 0.1
-  -
-    id: kanban-edits-section
-    title: Kanban Edits
-    type: heading
-    level: 2
-    collapsed: true
-  -
-    id: enable-kanban-edits
-    title: Enable Kanban Edits
-    description: Enable custom Kanban board styling
-    type: class-toggle
-    default: true
-  -
-    id: kanban-lane-width
-    title: Kanban Lane Width
-    description: Width of Kanban lanes in pixels
-    type: variable-number
-    default: 400
-    format: px
-  -
-    id: kanban-item-margin
-    title: Kanban Item Margin
-    description: Top margin for Kanban items in pixels
-    type: variable-number
-    default: 10
-    format: px
-  -
-    id: sidebar-autohide-section
-    title: Sidebar Auto-hide
-    type: heading
-    level: 2
-    collapsed: true
-  -
-    id: enable-sidebar-autohide
-    title: Enable Sidebar Auto-hide
-    description: Enable auto-hiding sidebar tab icons
-    type: class-toggle
-    default: false
-  -
-    id: sidebar-tab-height
-    title: Sidebar Tab Collapsed Height
-    description: Height of collapsed sidebar tabs in pixels
-    type: variable-number
-    default: 10
-    format: px
-  -
-    id: card-layout-section
-    title: Card Layout
-    type: heading
-    level: 2
-    collapsed: true
-  -
-    id: card-layout-open-light
-    title: Enable card layout (light mode)
-    description: Enable Border theme-style card layout for light mode
-    type: class-toggle
-    default: false
-  -
-    id: card-layout-open-dark
-    title: Enable card layout (dark mode)
-    description: Enable Border theme-style card layout for dark mode
-    type: class-toggle
-    default: false
-  -
-    id: card-border-radius-light
-    title: Card border radius (light mode)
-    description: Input your border-radius value here
-    type: variable-text
-    default: 8px
-  -
-    id: card-border-radius-dark
-    title: Card border radius (dark mode)
-    description: Input your border-radius value here
-    type: variable-text
-    default: 8px
-  -
-    id: card-shadow-light
-    title: Card shadow (light mode)
-    description: Input your box-shadow value here
-    type: variable-text
-    default: 0 2px 8px rgba(0,0,0,0.1)
-  -
-    id: card-shadow-dark
-    title: Card shadow (dark mode)
-    description: Input your box-shadow value here
-    type: variable-text
-    default: 0 2px 8px rgba(0,0,0,0.3)
-  -
-    id: background-underlying-select-light
-    title: Underlying background (light mode)
-    description: Background color behind cards in light mode
-    type: class-select
-    allowEmpty: false
-    default: background-underlying-default-light
-    options:
-        -   label: background-primary
-            value: background-underlying-primary-light
-        -   label: background-secondary
-            value: background-underlying-secondary-light
-        -   label: adapt to accent color (default)
-            value: background-underlying-default-light
-        -   label: customize color
-            value: background-underlying-Color-light
-  -
-    id: background-underlying-light
-    title: Customize underlying background color (light mode)
-    description: Custom background color behind cards in light mode
-    type: variable-color
-    format: hex
-    default: '#f0f0f0'
-  -
-    id: background-underlying-select-dark
-    title: Underlying background (dark mode)
-    description: Background color behind cards in dark mode
-    type: class-select
-    allowEmpty: false
-    default: background-underlying-default-dark
-    options:
-        -   label: background-primary
-            value: background-underlying-primary-dark
-        -   label: background-secondary
-            value: background-underlying-secondary-dark
-        -   label: adapt to accent color (default)
-            value: background-underlying-default-dark
-        -   label: customize color
-            value: background-underlying-Color-dark
-  -
-    id: background-underlying-dark
-    title: Customize underlying background color (dark mode)
-    description: Custom background color behind cards in dark mode
-    type: variable-color
-    format: hex
-    default: '#1a1a1a'
-  -
-    id: plugin-setting-width
-    title: Plugin Setting Box Width
-    description: Width of plugin setting boxes in pixels
-    type: variable-number
-    default: 600
-    format: px
-  -
-    id: Header-Colors
-    title: Header Colors
-    description: Customize header colors and styling
-    type: heading
-    level: 3
-    collapsed: true
-  -
-    id: header-color-light
-    title: Header color (light mode)
-    description: Color for headers in light mode
-    type: variable-color
-    format: hex
-    default: '#ff6b6b'
-  -
-    id: header-color-dark
-    title: Header color (dark mode)
-    description: Color for headers in dark mode
-    type: variable-color
-    format: hex
-    default: '#ff8787'
-  -
-    id: header-border-toggle
-    title: Enable header borders
-    description: Add borders to headers
-    type: class-toggle
-  -
-    id: header-font-family
-    title: Header font family
-    description: Font family for headers
-    type: variable-text
-    default: 'inherit'
-  -
-    id: header-font-weight
-    title: Header font weight
-    description: Font weight for headers
-    type: variable-number-slider
-    default: 600
-    min: 100
-    max: 900
-    step: 100
-  -
-    id: plugin-setting-padding
-    title: Plugin Setting Box Padding
-    description: Padding inside plugin setting boxes in pixels
-    type: variable-number-slider
-    default: 12
-    min: 8
-    max: 32
-    step: 2
+      NOTE: This theme does not and will not support the Obsidian Style Settings plugin until it is updated regularly again. As of August 24, 2025, it hasn't been updated in a year so I have no plans to support it.
 */
 
-/*hide style setting option*/
-body:not(.background-underlying-Color-light) .setting-item[data-id=background-underlying-light],
-body:not(.background-underlying-Color-dark) .setting-item[data-id=background-underlying-dark] {
-    display: none;
-}
-
-/* ===== CSS VARIABLES ===== */
-:root {
-  --default-font: "Excalifont", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif;
-  --mermaid-font: "Excalifont", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif;
-  --reveal-font: "Excalifont", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif;
-  --font-monospace: "JetBrains Mono", monospace;
+/* -----------------------------------------------------------------------------------------
+                                       Colors
+----------------------------------------------------------------------------------------- */
+/* ----------------------------------------------
+                Dark Theme
+------------------------------------------------- */
+.theme-dark {
+  /* File Explorer Colors */
+  --file-explorer-active-color: rgb(5, 13, 46);
+  --file-explorer-hover-color: rgb(246, 246, 246);
+  --file-explorer-bg-active-color: rgba(43, 76, 223, 0.603);
+  /* background-color: rgba(102, 113, 174, 0.401) !important; */
+  --file-explorer-bg-hover-color: rgba(58, 60, 69, 0.603);
+  --bg-behind-note: rgba(58, 60, 69);
+  --bg-behind-file-explorer: rgba(58, 60, 69);
   
-  /* Snippet Variables */
-  --rainbow-folder-brightness: 0.8;
-  --kanban-lane-width: 400px;
-  --kanban-item-margin: 10px;
-  --sidebar-tab-height: 10px;
-  
-  /* Card Layout Variables */
-  --card-border-radius-light: 8px;
-  --card-border-radius-dark: 8px;
-  --card-shadow-light: 0 2px 8px rgba(0,0,0,0.1);
-  --card-shadow-dark: 0 2px 8px rgba(0,0,0,0.3);
-  --background-underlying-light: #f0f0f0;
-  --background-underlying-dark: #1a1a1a;
-  --background-underlying: var(--background-tertiary);
-  
-  /* Plugin Settings Variables */
-  --plugin-setting-width: 600px;
-  --plugin-setting-padding: 12px;
-}
-
-/* ===== BASELINE FONT ===== */
-@font-face {
-  font-family: 'Excalifont';
-  src: url('data:font/woff2;base64,d09GMgABAAAAAEQsABIAAAAA8TQAAEPEAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP0ZGVE0cGh4GYACEXhEMCvNYy0QLXAABNG...');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* Apply base font */
-body {
-  --default-font: var(--default-font);
-  --font-interface: var(--default-font);
-  --font-text: var(--default-font);
-  --font-monospace: var(--font-monospace);
-}
-
-/* ===== CUSTOM CALLOUTS ===== */
-body.enable-custom-callouts .callout[data-callout="abstract"],
-body.enable-custom-callouts .callout[data-callout="summary"],
-body.enable-custom-callouts .callout[data-callout="tldr"] {
-  --callout-color: 0, 176, 255;
-  --callout-icon: lucide-clipboard-list;
-}
-
-body.enable-custom-callouts .callout[data-callout="info"] {
-  --callout-color: 0, 184, 212;
-  --callout-icon: lucide-info;
-}
-
-body.enable-custom-callouts .callout[data-callout="todo"] {
-  --callout-color: 0, 184, 212;
-  --callout-icon: lucide-check-circle-2;
-}
-
-body.enable-custom-callouts .callout[data-callout="tip"],
-body.enable-custom-callouts .callout[data-callout="hint"],
-body.enable-custom-callouts .callout[data-callout="important"] {
-  --callout-color: 0, 191, 165;
-  --callout-icon: lucide-flame;
-}
-
-body.enable-custom-callouts .callout[data-callout="success"],
-body.enable-custom-callouts .callout[data-callout="check"],
-body.enable-custom-callouts .callout[data-callout="done"] {
-  --callout-color: 0, 200, 83;
-  --callout-icon: lucide-check;
-}
-
-body.enable-custom-callouts .callout[data-callout="question"],
-body.enable-custom-callouts .callout[data-callout="help"],
-body.enable-custom-callouts .callout[data-callout="faq"] {
-  --callout-color: 100, 221, 23;
-  --callout-icon: lucide-help-circle;
-}
-
-body.enable-custom-callouts .callout[data-callout="warning"],
-body.enable-custom-callouts .callout[data-callout="caution"],
-body.enable-custom-callouts .callout[data-callout="attention"] {
-  --callout-color: 255, 145, 0;
-  --callout-icon: lucide-alert-triangle;
-}
-
-body.enable-custom-callouts .callout[data-callout="failure"],
-body.enable-custom-callouts .callout[data-callout="fail"],
-body.enable-custom-callouts .callout[data-callout="missing"] {
-  --callout-color: 233, 49, 71;
-  --callout-icon: lucide-x;
-}
-
-body.enable-custom-callouts .callout[data-callout="danger"],
-body.enable-custom-callouts .callout[data-callout="error"] {
-  --callout-color: 213, 0, 0;
-  --callout-icon: lucide-zap;
-}
-
-body.enable-custom-callouts .callout[data-callout="bug"] {
-  --callout-color: 233, 49, 71;
-  --callout-icon: lucide-bug;
-}
-
-body.enable-custom-callouts .callout[data-callout="example"] {
-  --callout-color: 124, 77, 255;
-  --callout-icon: lucide-list;
-}
-
-body.enable-custom-callouts .callout[data-callout="quote"],
-body.enable-custom-callouts .callout[data-callout="cite"] {
-  --callout-color: 158, 158, 158;
-  --callout-icon: lucide-quote;
-}
-
-/* ===== CUSTOM CHECKBOXES ===== */
-body.enable-erin-checkboxes .HyperMD-task-line[data-task="x"] .task-list-item-checkbox,
-body.enable-erin-checkboxes .markdown-preview-view .task-list-item[data-task="x"] .task-list-item-checkbox {
-  background-color: rgb(var(--color-green));
-  background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="m1 7 4.5 4.5L13 3"/></svg>');
-  background-size: 70%;
-  background-position: 50%;
-  background-repeat: no-repeat;
-  border: none;
-  color: var(--checkbox-color);
-}
-
-body.enable-erin-checkboxes .HyperMD-task-line[data-task="-"] .task-list-item-checkbox,
-body.enable-erin-checkboxes .markdown-preview-view .task-list-item[data-task="-"] .task-list-item-checkbox {
-  background-color: rgb(var(--color-yellow));
-  background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M4 7h6"/></svg>');
-  background-size: 70%;
-  background-position: 50%;
-  background-repeat: no-repeat;
-  border: none;
-  color: var(--checkbox-color);
-}
-
-body.enable-erin-checkboxes .HyperMD-task-line[data-task=">"] .task-list-item-checkbox,
-body.enable-erin-checkboxes .markdown-preview-view .task-list-item[data-task=">"] .task-list-item-checkbox {
-  background-color: rgb(var(--color-blue));
-  background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="m5.5 4.5 3 3-3 3"/></svg>');
-  background-size: 70%;
-  background-position: 50%;
-  background-repeat: no-repeat;
-  border: none;
-  color: var(--checkbox-color);
-}
-
-body.enable-erin-checkboxes .HyperMD-task-line[data-task="!"] .task-list-item-checkbox,
-body.enable-erin-checkboxes .markdown-preview-view .task-list-item[data-task="!"] .task-list-item-checkbox {
-  background-color: rgb(var(--color-orange));
-  background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M7 4.5v3m0 1.5v.5"/></svg>');
-  background-size: 70%;
-  background-position: 50%;
-  background-repeat: no-repeat;
-  border: none;
-  color: var(--checkbox-color);
-}
-
-/* ===== FONT COLORS ===== */
-body.enable-font-colors .red { color: #ff6b6b; }
-body.enable-font-colors .orange { color: #ffa500; }
-body.enable-font-colors .yellow { color: #ffeb3b; }
-body.enable-font-colors .green { color: #4caf50; }
-body.enable-font-colors .cyan { color: #00bcd4; }
-body.enable-font-colors .blue { color: #2196f3; }
-body.enable-font-colors .purple { color: #9c27b0; }
-body.enable-font-colors .pink { color: #e91e63; }
-
-body.enable-font-colors .bg-red { background-color: #ff6b6b; }
-body.enable-font-colors .bg-orange { background-color: #ffa500; }
-body.enable-font-colors .bg-yellow { background-color: #ffeb3b; }
-body.enable-font-colors .bg-green { background-color: #4caf50; }
-body.enable-font-colors .bg-cyan { background-color: #00bcd4; }
-body.enable-font-colors .bg-blue { background-color: #2196f3; }
-body.enable-font-colors .bg-purple { background-color: #9c27b0; }
-body.enable-font-colors .bg-pink { background-color: #e91e63; }
-
-/* ===== FONT STYLES ===== */
-body.enable-font-styles .deg-left,
-body.enable-font-styles .rotate-left {
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  height: auto;
-  max-height: 300px;
-  width: fit-content;
-  white-space: pre-wrap;
-  float: left;
-  margin: 0 10px;
-}
-
-body.enable-font-styles .deg-right,
-body.enable-font-styles .rotate-right {
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  height: auto;
-  max-height: 300px;
-  width: fit-content;
-  white-space: pre-wrap;
-  float: right;
-  margin: 0 10px;
-}
-
-body.enable-font-styles .italic,
-body.enable-font-styles .font-italic,
-body.enable-font-styles .em,
-body.enable-font-styles .text-italic,
-body.enable-font-styles .text-em,
-body.enable-font-styles .font-em {
-  font-style: italic;
-}
-
-body.enable-font-styles .bold,
-body.enable-font-styles .font-bold,
-body.enable-font-styles .strong,
-body.enable-font-styles .font-strong {
-  font-weight: 600;
-}
-
-body.enable-font-styles .center,
-body.enable-font-styles .text-center,
-body.enable-font-styles .c,
-body.enable-font-styles .font-center,
-body.enable-font-styles .font-c,
-body.enable-font-styles .text-c {
-  text-align: center;
-  width: 100%;
-  display: block;
-}
-
-body.enable-font-styles .right,
-body.enable-font-styles .text-right,
-body.enable-font-styles .r,
-body.enable-font-styles .font-r,
-body.enable-font-styles .text-r,
-body.enable-font-styles .font-right {
-  text-align: right;
-  width: 100%;
-  display: block;
-}
-
-/* ===== RAINBOW FOLDERS ===== */
-body.enable-rainbow-folders .nav-folder-children > .nav-folder,
-body.enable-rainbow-folders .nav-files-container > div > .nav-folder {
-  background-color: var(--folder-color);
-  --nav-item-color: black;
-  --nav-item-color-hover: black;
+  /* Navigation Colors */
   --nav-collapse-icon-color: black;
   --nav-item-color-active: black;
-  border-radius: 10px;
+  --active-file-text-color: rgb(255, 255, 255);
+  
+  /* Rainbow Folder Colors */
+  --folder-color-1: rgba(243, 139, 168, 0.493);
+  --folder-color-2: rgba(235, 160, 172, 0.493);
+  --folder-color-3: rgba(250, 179, 135, 0.493);
+  --folder-color-4: rgba(249, 226, 175, 0.493);
+  --folder-color-5: rgba(166, 227, 161, 0.493);
+  --folder-color-6: rgba(148, 226, 213, 0.493);
+  --folder-color-7: rgba(137, 220, 235, 0.493);
+  --folder-color-8: rgba(116, 199, 236, 0.493);
+  --folder-color-9: rgba(135, 176, 249, 0.493);
+  --folder-color-10: rgba(180, 190, 254, 0.493);
+  --folder-color-11: rgba(203, 166, 247, 0.493);
+  --file-explorer-file-color: rgba(58, 60, 69, 0.603);
+  --file-explorer-file-hover-color: rgba(58, 60, 69, 0.603);
+
+  /* Card Variables */
+  --card-border-radius-dark: 8px;
+  --card-shadow-dark: 0 -1px 0 0 var(--background-modifier-border), 0 0 0 1px var(--background-modifier-border);
+  --card-shadow-border-radius-dark: calc(var(--card-border-radius-dark) - 1px);
+
+  /* Obsidian Theme Variables */
+  --background-primary: var(--bg-behind-note);
+  --background-secondary: var(--bg-behind-file-explorer);
 }
 
-body.enable-rainbow-folders .nav-folder-children > .nav-folder:hover,
-body.enable-rainbow-folders .nav-files-container > div > .nav-folder:hover {
-  filter: brightness(var(--rainbow-folder-brightness));
+/* ----------------------------------------------
+               Light Theme
+------------------------------------------------- */
+
+.theme-light {
+  /* File Explorer Colors */
+  --file-explorer-active-color: rgb(5, 13, 46);
+  --file-explorer-hover-color: rgb(25, 25, 25);
+  /* background-color: rgba(102, 113, 174, 0.401) !important; */
+  --file-explorer-bg-active-color: rgba(43, 76, 223, 0.603);
+  --file-explorer-bg-hover-color: rgba(58, 60, 69, 0.603);
+  --bg-behind-note: rgba(248, 250, 255, 0.955);
+  --bg-behind-file-explorer: rgb(215, 215, 215);
+  
+  /* Workspace background for card layout */
+  --background-primary: rgb(245, 245, 245);
+  --background-secondary: rgb(235, 235, 235);
+  
+  /* Navigation Colors */
+  --nav-collapse-icon-color: black;
+  --nav-item-color-active: black;
+  --active-file-text-color: rgb(255, 255, 255);
+  
+  /* Rainbow Folder Colors */
+  --folder-color-1: rgba(243, 139, 168, 0.493);
+  --folder-color-2: rgba(235, 160, 172, 0.493);
+  --folder-color-3: rgba(250, 179, 135, 0.493);
+  --folder-color-4: rgba(249, 226, 175, 0.493);
+  --folder-color-5: rgba(166, 227, 161, 0.493);
+  --folder-color-6: rgba(148, 226, 213, 0.493);
+  --folder-color-7: rgba(137, 220, 235, 0.493);
+  --folder-color-8: rgba(116, 199, 236, 0.493);
+  --folder-color-9: rgba(135, 176, 249, 0.493);
+  --folder-color-10: rgba(180, 190, 254, 0.493);
+  --folder-color-11: rgba(203, 166, 247, 0.493);
+  --file-explorer-file-color: rgba(197, 198, 200, 0.603);
+  --file-explorer-file-hover-color: rgba(190, 193, 203, 0.603);
+
+  /* Card Variables */
+  --card-border-radius-light: 8px;
+  --card-shadow-light: 0 -1px 0 0 rgba(255, 255, 255, .24), 0 0 0 1px var(--background-modifier-border), 0 0 6px var(--background-modifier-border);
+  --card-shadow-border-radius-light: calc(var(--card-border-radius-light) - 1px);
+
+  /* Obsidian Theme Variables */
+  --background-primary: var(--bg-behind-note);
+  --background-secondary: var(--bg-behind-file-explorer);
 }
 
-body.enable-rainbow-folders .nav-folder-children > .nav-folder:nth-child(11n + 2),
-body.enable-rainbow-folders .nav-files-container > div > .nav-folder:nth-child(11n + 2) {
-  --folder-color: rgb(243, 139, 168);
+/* -----------------------------------------------------------------------------------------
+                                     Card Layout
+----------------------------------------------------------------------------------------- */
+
+/* Workspace background for card layout */
+body:not(.is-mobile) .workspace {
+  background-color: var(--background-secondary) !important;
 }
 
-body.enable-rainbow-folders .nav-folder-children > .nav-folder:nth-child(11n + 3),
-body.enable-rainbow-folders .nav-files-container > div > .nav-folder:nth-child(11n + 3) {
-  --folder-color: rgb(235, 160, 172);
+/* Card layout light theme - Border theme style */
+body:not(.is-mobile) .workspace::before {
+  display: none;
 }
 
-body.enable-rainbow-folders .nav-folder-children > .nav-folder:nth-child(11n + 4),
-body.enable-rainbow-folders .nav-files-container > div > .nav-folder:nth-child(11n + 4) {
-  --folder-color: rgb(250, 179, 135);
+body:not(.is-mobile) .workspace.is-left-sidedock-open .workspace-split.mod-horizontal.mod-left-split {
+  margin-right: 16px;
 }
 
-body.enable-rainbow-folders .nav-folder-children > .nav-folder:nth-child(11n + 5),
-body.enable-rainbow-folders .nav-files-container > div > .nav-folder:nth-child(11n + 5) {
-  --folder-color: rgb(249, 226, 175);
+body:not(.is-mobile) .workspace.is-right-sidedock-open .workspace-split.mod-horizontal.mod-right-split {
+  margin-left: 16px;
 }
 
-body.enable-rainbow-folders .nav-folder-children > .nav-folder:nth-child(11n + 6),
-body.enable-rainbow-folders .nav-files-container > div > .nav-folder:nth-child(11n + 6) {
-  --folder-color: rgb(166, 227, 161);
+body:not(.is-mobile) .workspace-split.mod-vertical {
+  gap: 16px;
 }
 
-body.enable-rainbow-folders .nav-folder-children > .nav-folder:nth-child(11n + 7),
-body.enable-rainbow-folders .nav-files-container > div > .nav-folder:nth-child(11n + 7) {
-  --folder-color: rgb(148, 226, 213);
-}
-
-body.enable-rainbow-folders .nav-folder-children > .nav-folder:nth-child(11n + 8),
-body.enable-rainbow-folders .nav-files-container > div > .nav-folder:nth-child(11n + 8) {
-  --folder-color: rgb(137, 220, 235);
-}
-
-body.enable-rainbow-folders .nav-folder-children > .nav-folder:nth-child(11n + 9),
-body.enable-rainbow-folders .nav-files-container > div > .nav-folder:nth-child(11n + 9) {
-  --folder-color: rgb(116, 199, 236);
-}
-
-body.enable-rainbow-folders .nav-folder-children > .nav-folder:nth-child(11n + 10),
-body.enable-rainbow-folders .nav-files-container > div > .nav-folder:nth-child(11n + 10) {
-  --folder-color: rgb(135, 176, 249);
-}
-
-body.enable-rainbow-folders .nav-folder-children > .nav-folder:nth-child(11n + 11),
-body.enable-rainbow-folders .nav-files-container > div > .nav-folder:nth-child(11n + 11) {
-  --folder-color: rgb(180, 190, 254);
-}
-
-body.enable-rainbow-folders .nav-folder-children > .nav-folder:nth-child(11n + 12),
-body.enable-rainbow-folders .nav-files-container > div > .nav-folder:nth-child(11n + 12) {
-  --folder-color: rgb(203, 166, 247);
-}
-
-/* ===== KANBAN EDITS ===== */
-body.enable-kanban-edits .kanban-plugin__board > div {
-  margin-inline-start: 0;
-}
-
-body.enable-kanban-edits .kanban-plugin {
-  --lane-width: var(--kanban-lane-width);
-}
-
-body.enable-kanban-edits .kanban-plugin__item-wrapper {
-  margin-top: var(--kanban-item-margin);
-}
-
-/* ===== SIDEBAR AUTO-HIDE ===== */
-body.enable-sidebar-autohide .workspace-tabs:not(.mod-top) .workspace-tab-header-container,
-body.enable-sidebar-autohide .workspace-tabs:not(.mod-top) .workspace-tab-header-container * {
-  box-shadow: none !important;
-  outline: none !important;
-}
-
-body.enable-sidebar-autohide .workspace-tabs:not(.mod-top) .workspace-tab-header-container * {
-  background-color: transparent !important;
-}
-
-body.enable-sidebar-autohide .workspace-tabs:not(.mod-top) .workspace-tab-header-container .workspace-tab-header-inner-icon,
-body.enable-sidebar-autohide .workspace-tabs:not(.mod-top) .workspace-tab-header.is-active .workspace-tab-header-inner,
-body.enable-sidebar-autohide .workspace-tabs:not(.mod-top) .workspace-tab-header-container .workspace-tab-header-inner::before {
-  opacity: 0;
-  transform: translateY(-10px);
-  transition: opacity 200ms ease-in, transform 200ms ease-in;
-}
-
-body.enable-sidebar-autohide .workspace-tabs:not(.mod-top) .workspace-tab-header-container:hover .workspace-tab-header-inner-icon,
-body.enable-sidebar-autohide .workspace-tabs:not(.mod-top) .workspace-tab-header.is-active .workspace-tab-header-inner,
-body.enable-sidebar-autohide .workspace-tabs:not(.mod-top) .workspace-tab-header-container:hover .workspace-tab-header-inner::before {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-body.enable-sidebar-autohide .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
-  height: var(--sidebar-tab-height);
-  transition: height 200ms ease-in;
-  position: relative;
-}
-
-body.enable-sidebar-autohide .workspace-tabs:not(.mod-top) .workspace-tab-header-container:hover {
-  height: var(--header-height);
-  background-color: var(--background-primary) !important;
-}
-
-body.enable-sidebar-autohide .workspace-tabs:not(.mod-top) .workspace-tab-header-container::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 100%;
-  top: 100%;
-  position: absolute;
-  z-index: 1;
-}
-
-/* ===== PLUGIN SETTINGS ENHANCEMENT ===== */
-/* Make plugin setting boxes bigger and more spacious */
-.vertical-tab-content-container {
-  max-width: 100%;
-  width: 100%;
-}
-
-.setting-item {
-  padding: var(--plugin-setting-padding, 12px);
-  margin-bottom: 16px;
-  border-radius: 8px;
-  background-color: var(--background-primary-alt);
-  border: 1px solid var(--background-modifier-border);
-}
-
-/* ===== HEADER COLORS ===== */
-/* Header styling */
-h1, h2, h3, h4, h5, h6 {
-    font-family: var(--header-font-family, inherit);
-    font-weight: var(--header-font-weight, 600);
-}
-
-body.theme-light h1, body.theme-light h2, body.theme-light h3, body.theme-light h4, body.theme-light h5, body.theme-light h6 {
-    color: var(--header-color-light, #ff6b6b);
-}
-
-body.theme-dark h1, body.theme-dark h2, body.theme-dark h3, body.theme-dark h4, body.theme-dark h5, body.theme-dark h6 {
-    color: var(--header-color-dark, #ff8787);
-}
-
-/* Header borders when enabled */
-body.header-border-toggle h1, body.header-border-toggle h2, body.header-border-toggle h3, body.header-border-toggle h4, body.header-border-toggle h5, body.header-border-toggle h6 {
-    border-bottom: 2px solid currentColor;
-    padding-bottom: 4px;
-}
-
-.setting-item-info {
-  min-width: 200px;
-  flex-grow: 1;
-}
-
-.setting-item-control {
-  min-width: 200px;
-}
-
-.setting-item-name {
-  font-size: 16px;
-  font-weight: 600;
-  margin-bottom: 4px;
-}
-
-.setting-item-description {
-  font-size: 14px;
-  opacity: 0.8;
-  line-height: 1.4;
-}
-
-/* Enhance text areas and inputs in settings */
-.setting-item textarea,
-.setting-item input[type="text"],
-.setting-item input[type="number"] {
-  min-width: 300px;
-  padding: 12px;
-  border-radius: 6px;
-  border: 1px solid var(--background-modifier-border);
-  background-color: var(--background-primary);
-}
-
-.setting-item textarea {
-  min-height: 100px;
-  resize: vertical;
-}
-
-/* ===== CARD LAYOUT (BORDER THEME STYLE) ===== */
-
-/* Base transparent backgrounds for card layout */
-body:not(.is-mobile).card-layout-open-light .workspace-tabs:not(.mod-stacked) .workspace-leaf,
-body:not(.is-mobile).card-layout-open-light .workspace-tabs:not(.mod-stacked) .workspace-leaf-content,
-body:not(.is-mobile).card-layout-open-light .workspace-tabs:not(.mod-stacked) .view-header:not(.animate),
-body:not(.is-mobile).card-layout-open-light .workspace-tabs:not(.mod-stacked) .view-content:not(.vignette-radial, .vignette-linear, .animate),
-body:not(.is-mobile).card-layout-open-light .workspace-tab-header-container,
-body:not(.is-mobile).card-layout-open-light .workspace > .workspace-split,
-body:not(.is-mobile).card-layout-open-dark .workspace-tabs:not(.mod-stacked) .workspace-leaf,
-body:not(.is-mobile).card-layout-open-dark .workspace-tabs:not(.mod-stacked) .workspace-leaf-content,
-body:not(.is-mobile).card-layout-open-dark .workspace-tabs:not(.mod-stacked) .view-header:not(.animate),
-body:not(.is-mobile).card-layout-open-dark .workspace-tabs:not(.mod-stacked) .view-content:not(.vignette-radial, .vignette-linear, .animate),
-body:not(.is-mobile).card-layout-open-dark .workspace-tab-header-container,
-body:not(.is-mobile).card-layout-open-dark .workspace > .workspace-split {
-  background-color: transparent !important;
-}
-
-/* App container and workspace backgrounds */
-body:not(.is-mobile).card-layout-open-light .app-container,
-body:not(.is-mobile).card-layout-open-light .workspace,
-body:not(.is-mobile).card-layout-open-dark .app-container,
-body:not(.is-mobile).card-layout-open-dark .workspace {
-  background-color: transparent;
-}
-
-/* background - underlying - only when card layout is enabled */
-body:not(.is-mobile).card-layout-open-light.theme-light:has(>.app-container),
-body:not(.is-mobile).card-layout-open-dark.theme-dark:has(>.app-container) {
-    background: var(--background-underlying);
-}
-
-body.background-underlying-primary-light.theme-light.card-layout-open-light,
-body.background-underlying-primary-dark.theme-dark.card-layout-open-dark {
-    --background-underlying: var(--background-primary) !important;
-}
-
-body.background-underlying-secondary-light.theme-light.card-layout-open-light,
-body.background-underlying-secondary-dark.theme-dark.card-layout-open-dark {
-    --background-underlying: var(--background-secondary) !important;
-}
-
-body.background-underlying-default-light.theme-light.card-layout-open-light,
-body.background-underlying-default-dark.theme-dark.card-layout-open-dark {
-    --background-underlying: var(--background-tertiary) !important;
-}
-
-body.background-underlying-Color-light.theme-light.card-layout-open-light {
-    --background-underlying: var(--background-underlying-light) !important;
-}
-
-body.background-underlying-Color-dark.theme-dark.card-layout-open-dark {
-    --background-underlying: var(--background-underlying-dark) !important;
-}
-
-/* Workspace leaf styling with cards */
-body.theme-light.card-layout-open-light .workspace-leaf {
-  border-radius: var(--card-border-radius-light);
+body:not(.is-mobile) .workspace-tab-container {
+  border-radius: var(--card-border-radius-light, 8px) !important;
+  overflow: hidden !important;
   box-shadow: var(--card-shadow-light);
-  background-color: var(--background-primary);
-  border: 1px solid var(--background-modifier-border);
-  margin: 8px;
-  overflow: hidden;
 }
 
-body.theme-dark.card-layout-open-dark .workspace-leaf {
-  border-radius: var(--card-border-radius-dark);
-  box-shadow: var(--card-shadow-dark);
-  background-color: var(--background-primary);
-  border: 1px solid var(--background-modifier-border);
-  margin: 8px;
-  overflow: hidden;
+body:not(.is-mobile) .workspace-tabs,
+body:not(.is-mobile) .workspace-split {
+  overflow: visible !important;
 }
 
-/* Remove borders from ribbons */
-body.card-layout-open-light .workspace-ribbon,
-body.card-layout-open-light .workspace-ribbon.mod-left.is-collapsed,
-body.card-layout-open-dark .workspace-ribbon,
-body.card-layout-open-dark .workspace-ribbon.mod-left.is-collapsed {
-  border-right: none;
-  background-color: transparent;
-}
-
-/* Tab header styling */
-body.card-layout-open-light .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active,
-body.card-layout-open-dark .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active {
+body:not(.is-mobile) .workspace-tabs,
+body:not(.is-mobile) .workspace-tab-header-container {
   background-color: transparent !important;
-  box-shadow: none;
-  overflow: visible;
 }
 
-/* View header gradients */
-body:not(.is-mobile).card-layout-open-light .view-header-title-container:not(.mod-at-start):before,
-body:not(.is-mobile).card-layout-open-light .view-header-title-container:not(.mod-at-end):after,
-body:not(.is-mobile).card-layout-open-dark .view-header-title-container:not(.mod-at-start):before,
-body:not(.is-mobile).card-layout-open-dark .view-header-title-container:not(.mod-at-end):after {
-  background: transparent;
+body:not(.is-mobile) .workspace-tabs:not(.mod-top) .workspace-tab-container {
+  border-top: unset;
 }
 
-/* Workspace split gaps */
-body.card-layout-open-light .workspace-split,
-body.card-layout-open-dark .workspace-split {
-  gap: 8px;
+/* Card layout dark theme - Border theme style */
+body:not(.is-mobile).theme-dark .workspace::before {
+  display: none;
 }
 
-/* Remove workspace dividers in card mode */
-body.theme-light.card-layout-open-light .workspace-tabs:not(.mod-top) .workspace-tab-container > .workspace-leaf,
-body.theme-dark.card-layout-open-dark .workspace-tabs:not(.mod-top) .workspace-tab-container > .workspace-leaf {
-  box-shadow: inset 0px 1px 0px transparent;
+body:not(.is-mobile).theme-dark .workspace.is-left-sidedock-open .workspace-split.mod-horizontal.mod-left-split {
+  margin-right: 16px;
 }
 
-/* Leaf resize handles */
-body.card-layout-open-light .workspace-leaf-resize-handle,
-body.card-layout-open-dark .workspace-leaf-resize-handle {
-  border-color: transparent;
-  background-color: transparent;
+body:not(.is-mobile).theme-dark .workspace.is-right-sidedock-open .workspace-split.mod-horizontal.mod-right-split {
+  margin-left: 16px;
 }
 
-/* Status bar in card mode */
-body.card-layout-open-light .status-bar,
-body.card-layout-open-dark .status-bar {
-  background-color: transparent;
-  border: none;
+body:not(.is-mobile).theme-dark .workspace-split.mod-vertical {
+  gap: 16px;
 }
 
-/* Sidebar backgrounds in card mode */
-body.card-layout-open-light .mod-left-split,
-body.card-layout-open-light .mod-right-split,
-body.card-layout-open-dark .mod-left-split,
-body.card-layout-open-dark .mod-right-split {
-  background-color: transparent;
+body:not(.is-mobile).theme-dark .workspace-tab-container {
+  border-radius: var(--card-border-radius-dark, 8px) !important;
+  overflow: hidden !important;
+  box-shadow: var(--card-shadow-dark);
 }
 
-/* Fix for indent guides in card mode */
-body.card-layout-open-light .markdown-rendered.show-indentation-guide li > ul::before,
-body.card-layout-open-light .markdown-rendered.show-indentation-guide li > ol::before,
-body.card-layout-open-dark .markdown-rendered.show-indentation-guide li > ul::before,
-body.card-layout-open-dark .markdown-rendered.show-indentation-guide li > ol::before {
-  left: -12px;
+body:not(.is-mobile).theme-dark .workspace-tabs,
+body:not(.is-mobile).theme-dark .workspace-split {
+  overflow: visible !important;
+}
+
+body:not(.is-mobile).theme-dark .workspace-tabs,
+body:not(.is-mobile).theme-dark .workspace-tab-header-container {
+  background-color: transparent !important;
+}
+
+body:not(.is-mobile).theme-dark .workspace-tabs:not(.mod-top) .workspace-tab-container {
+  border-top: unset;
+}
+
+/* Card highlight - matches Border theme settings */
+body:not(.is-mobile) .mod-root:has(.workspace-tabs+.workspace-tabs) .workspace-tabs.mod-active .workspace-tab-container {
+  outline-offset: 0px;
+  outline: 2px solid var(--color-accent);
+}
+
+/* Card layout scrolling fix */
+body:not(.is-mobile) .workspace-tabs.mod-stacked .workspace-tab-container {
+  overflow-x: auto !important;
+}
+
+body:not(.is-mobile) .workspace-tabs.mod-stacked .workspace-tab-container::-webkit-scrollbar-button {
+  width: 2px !important;
+}
+
+body:not(.is-mobile) .workspace-tabs.mod-stacked .workspace-tab-container::-webkit-scrollbar-track {
+  display: none;
+}
+
+/* Vault profile styling to match card layout */
+body:not(.is-mobile) .workspace-sidedock-vault-profile {
+  border-radius: var(--card-border-radius-light, 8px) !important;
+  background-color: var(--background-secondary) !important;
+  margin: 4px;
+}
+
+body:not(.is-mobile).theme-dark .workspace-sidedock-vault-profile {
+  border-radius: var(--card-border-radius-dark, 8px) !important;
+}
+
+/* -----------------------------------------------------------------------------------------
+                                     Rainbow Folders
+----------------------------------------------------------------------------------------- */
+.nav-folder-children > .nav-folder,
+.nav-files-container > div > .nav-folder {
+  background-color: var(--folder-color);
+  /* Text color on file explorer active state */
+  --nav-item-color: var(--file-explorer-active-color);
+  /* Text color on file explorer hover */
+  --nav-item-color-hover: var(--file-explorer-hover-color);
+  --nav-collapse-icon-color: var(--nav-collapse-icon-color);
+  --nav-item-color-active: var(--nav-item-color-active);
+  border-radius: 6px;
+}
+
+.nav-folder-children > .nav-folder {
+  filter: opacity(0.8);
+}
+
+.nav-files-container > div > .nav-folder:nth-child(11n + 2), .nav-files-container > div > .nav-folder:nth-child(11n + 2).tree-item-children {
+  --folder-color: var(--folder-color-1);
+}
+.nav-files-container > div > .nav-folder:nth-child(11n + 3), .nav-files-container > div > .nav-folder:nth-child(11n + 3).tree-item-children {
+  --folder-color: var(--folder-color-2);
+}
+.nav-files-container > div > .nav-folder:nth-child(11n + 4), .nav-files-container > div > .nav-folder:nth-child(11n + 4).tree-item-children {
+  --folder-color: var(--folder-color-3);
+}
+.nav-files-container > div > .nav-folder:nth-child(11n + 5), .nav-files-container > div > .nav-folder:nth-child(11n + 5).tree-item-children {
+  --folder-color: var(--folder-color-4);
+}
+.nav-files-container > div > .nav-folder:nth-child(11n + 6), .nav-files-container > div > .nav-folder:nth-child(11n + 6).tree-item-children {
+  --folder-color: var(--folder-color-5);
+}
+.nav-files-container > div > .nav-folder:nth-child(11n + 7), .nav-files-container > div > .nav-folder:nth-child(11n + 7).tree-item-children {
+  --folder-color: var(--folder-color-6);
+}
+.nav-files-container > div > .nav-folder:nth-child(11n + 8), .nav-files-container > div > .nav-folder:nth-child(11n + 8).tree-item-children {
+  --folder-color: var(--folder-color-7);
+}
+.nav-files-container > div > .nav-folder:nth-child(11n + 9), .nav-files-container > div > .nav-folder:nth-child(11n + 9).tree-item-children {
+  --folder-color: var(--folder-color-8);
+}
+.nav-files-container > div > .nav-folder:nth-child(11n + 10), .nav-files-container > div > .nav-folder:nth-child(11n + 10).tree-item-children {
+  --folder-color: var(--folder-color-9);
+}
+.nav-files-container > div > .nav-folder:nth-child(11n + 11), .nav-files-container > div > .nav-folder:nth-child(11n + 11).tree-item-children {
+  --folder-color: var(--folder-color-10);
+}
+.nav-files-container > div > .nav-folder:nth-child(11n + 12), .nav-files-container > div > .nav-folder:nth-child(11n + 12).tree-item-children {
+  --folder-color: var(--folder-color-11);
+}
+
+[data-type="file-explorer"] .nav-files-container > div > .nav-file {
+  background-color: var(--file-explorer-file-color);
+}
+
+[data-type="file-explorer"] .nav-files-container > div > .nav-file:hover {
+  /* background-color: rgba(58, 60, 69, 0.603); */
+  background-color: var(--file-explorer-file-hover-color);
+}
+
+/* active file bg color fix for minimal & border themes */
+.nav-file-title.is-active, .nav-folder-title.is-active,
+.theme-dark:not(.is-grabbing) .workspace-leaf-content[data-type="bookmarks"] .tree-item-self.is-active:hover, .theme-dark .workspace-leaf-content[data-type="bookmarks"] .tree-item-self.is-active, .theme-dark .mk-tree-item.nav-folder-title.is-active.is-selected, .theme-dark .mk-tree-item.nav-file-title.is-active.is-selected, .theme-dark:not(.is-grabbing) .nav-file-title.is-active:hover, .theme-dark:not(.is-grabbing) .nav-folder-title.is-active:hover, .theme-dark .nav-file-title.is-active, .theme-dark .nav-folder-title.is-active {
+    background-color: var(--file-explorer-bg-active-color) !important;
+    color: var(--active-file-text-color) !important;
 }
